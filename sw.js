@@ -23,9 +23,10 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
-  // Pages: try the network first, fall back to the saved copy when offline.
+  // Pages: always ask for the newest copy (the host may hold an old one for a few minutes),
+  // fall back to the saved copy when offline.
   event.respondWith(
-    fetch(req)
+    fetch(req, { cache: "no-cache" })
       .then((res) => {
         const copy = res.clone();
         caches.open(CACHE).then((c) => c.put(req, copy));
