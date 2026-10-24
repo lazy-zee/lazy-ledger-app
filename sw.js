@@ -1,5 +1,5 @@
 // Lazy Ledger service worker: makes the app installable and lets it open without a connection.
-const CACHE = "lazy-ledger-v1";
+const CACHE = "lazy-ledger-v2"; // bump when icons or other fixed files change, so phones drop the old copies
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (event) => {
