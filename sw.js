@@ -1,7 +1,7 @@
 // Lazy Ledger service worker: makes the app installable, opens it fast, and lets it open without a connection.
 // docs/specs/fast-open.md has the rules.
 const CACHE = "lazy-ledger-v3"; // bump when icons or other fixed files change, so phones drop the old copies
-const BUILD = "z3Ay7FoR38r0eG7qlkE8M"; // stamped with the build id by scripts/sw-precache.mjs, so every release installs anew
+const BUILD = "hgRCywaHxLEbkc_Uwf4bp"; // stamped with the build id by scripts/sw-precache.mjs, so every release installs anew
 const SCOPE = "/lazy-ledger-app/";
 
 // Installing a version saves all of its built files (out/precache.json), so a saved page of this version can
